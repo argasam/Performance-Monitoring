@@ -1,0 +1,3220 @@
+{
+	"info": {
+		"_postman_id": "719280e3-d5d0-4b2a-bd05-46174545df86",
+		"name": "APKS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29863551",
+		"_collection_link": "https://lunar-station-394524.postman.co/workspace/APKS~5aae23c6-6220-492b-80df-d5581b595946/collection/29863551-719280e3-d5d0-4b2a-bd05-46174545df86?action=share&source=collection_link&creator=29863551"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"superadmin\",\r\n    \"username\": \"superadmin\",\r\n    \"email\": \"23523017@std.stei.itb.ac.id\",\r\n    \"password\": \"pw123456\",\r\n    \"role\": \"superadmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"wisnu\",\r\n    \"username\" : \"wisnu\",\r\n    \"email\":\"23523026@std.stei.itb.ac.id\",\r\n    \"password\":\"pw123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "376"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"178-A6zHiaYSngAK3HojDR1wl5mz8EU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Sep 2023 03:57:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"role\": \"guest\",\n        \"_id\": \"650a6dbdd43e2546fcac541a\",\n        \"name\": \"wisnu\",\n        \"username\": \"wisnu\",\n        \"email\": \"23523026@std.stei.itb.ac.id\",\n        \"createdAt\": \"2023-09-20T03:57:49.354Z\",\n        \"updatedAt\": \"2023-09-20T03:57:49.457Z\",\n        \"__v\": 1\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTBhNmRiZGQ0M2UyNTQ2ZmNhYzU0MWEiLCJpYXQiOjE2OTUxODIyNjl9.HDRTkWJnXMn0Ymcj2zxL9qe8oyxD34AHf0HSnyYLv8w\"\n}"
+						},
+						{
+							"name": "400 - Duplicate Username",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"pege\",\r\n    \"username\" : \"pege\",\r\n    \"email\":\"23523017@std.stei.itb.ac.id\",\r\n    \"password\":\"pw123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-hRoiuE1yxnEV33iQIk/PK2qKv2c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 13:38:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"driver\": true,\n    \"name\": \"MongoError\",\n    \"index\": 0,\n    \"code\": 11000,\n    \"keyPattern\": {\n        \"username\": 1\n    },\n    \"keyValue\": {\n        \"username\": \"pege\"\n    }\n}"
+						},
+						{
+							"name": "400 - Duplicate Email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"pege\",\r\n    \"username\": \"pege\",\r\n    \"email\": \"23523017@std.stei.itb.ac.id\",\r\n    \"password\": \"pw123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-yIdf6EAk97wmv4xJy6GmxgdLqpo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 13:42:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"driver\": true,\n    \"name\": \"MongoError\",\n    \"index\": 0,\n    \"code\": 11000,\n    \"keyPattern\": {\n        \"email\": 1\n    },\n    \"keyValue\": {\n        \"email\": \"23523017@std.stei.itb.ac.id\"\n    }\n}"
+						},
+						{
+							"name": "400 - Duplicate Phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"superadmin\",\r\n    \"username\": \"superadmin\",\r\n    \"email\": \"mpg066@gmail.com\",\r\n    \"password\": \"pw123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "109"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6d-7j805zfjxFBgIBCWY4EXaAK3jHw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 13:43:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"driver\": true,\n    \"name\": \"MongoError\",\n    \"index\": 0,\n    \"code\": 11000,\n    \"keyPattern\": {\n        \"phone\": 1\n    },\n    \"keyValue\": {\n        \"phone\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.collectionVariables.set(\"token\", res.token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"pege\",\r\n    \"password\":\"pw123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"pege\",\r\n    \"password\":\"pw123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "374"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"176-jsktbQgebXSlp3f/xM0q/kLumJc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 13:41:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"role\": \"guest\",\n        \"_id\": \"650c464df835c759046b12f7\",\n        \"name\": \"pege\",\n        \"username\": \"pege\",\n        \"email\": \"23523017@std.stei.itb.ac.id\",\n        \"createdAt\": \"2023-09-21T13:34:05.418Z\",\n        \"updatedAt\": \"2023-09-21T13:41:20.723Z\",\n        \"__v\": 2\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTBjNDY0ZGY4MzVjNzU5MDQ2YjEyZjciLCJpYXQiOjE2OTUzMDM2ODB9.OfbWuHeCTUDSB9qdZU74kiUS7GhNKY6ecPmLLwyZ1iw\"\n}"
+						}
+					]
+				},
+				{
+					"name": "My Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.collectionVariables.set(\"token\", res.token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/me",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/me",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-34HAbFkCLuDygvfYKNvpOOZ2XUk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:21:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"role\": \"superadmin\",\n    \"_id\": \"650c464df835c759046b12f7\",\n    \"name\": \"pege\",\n    \"username\": \"pege\",\n    \"email\": \"23523017@std.stei.itb.ac.id\",\n    \"createdAt\": \"2023-09-21T13:34:05.418Z\",\n    \"updatedAt\": \"2023-09-21T15:21:32.885Z\",\n    \"__v\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List of Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "212"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d4-I1RTtpAa7pQDguPqhKLegNidmXo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:22:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"role\": \"superadmin\",\n        \"_id\": \"650c464df835c759046b12f7\",\n        \"name\": \"pege\",\n        \"username\": \"pege\",\n        \"email\": \"23523017@std.stei.itb.ac.id\",\n        \"createdAt\": \"2023-09-21T13:34:05.418Z\",\n        \"updatedAt\": \"2023-09-21T15:22:29.914Z\",\n        \"__v\": 6\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete my Account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/me",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/:user_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cinema",
+			"item": [
+				{
+					"name": "Get Cinemas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/cinemas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cinemas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/cinemas",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"cinemas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-EiuT+IGKDKWW/bOa9ARNjXv+X3w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Sep 2023 02:56:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"seats\": [\n            \"A\",\n            \"B\",\n            \"C\"\n        ],\n        \"_id\": \"650e53ee27d92c7c0c511001\",\n        \"name\": \"PG\",\n        \"ticketPrice\": 50000,\n        \"city\": \"bandung\",\n        \"seatsAvailable\": 3,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Cinemas by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/cinemas/:cinema_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cinemas",
+								":cinema_id"
+							],
+							"variable": [
+								{
+									"key": "cinema_id",
+									"value": "650c5c2ee1101d1be65d8a48"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cinemas/:cinema_id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas",
+										":cinema_id"
+									],
+									"variable": [
+										{
+											"key": "cinema_id",
+											"value": "650c5c2ee1101d1be65d8a48"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"84-mKf06gvDMu1zB96Bbrl9poxPN8U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:10:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"seats\": [\n        \"A\",\n        \"B\",\n        \"C\"\n    ],\n    \"_id\": \"650c5c2ee1101d1be65d8a48\",\n    \"name\": \"PG\",\n    \"ticketPrice\": 50000,\n    \"city\": \"bandung\",\n    \"seatsAvailable\": 3,\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "404 - Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cinemas/:cinema_id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas",
+										":cinema_id"
+									],
+									"variable": [
+										{
+											"key": "cinema_id",
+											"value": "650c5c2ee1101d1be65d8a48"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:11:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Not Found"
+						}
+					]
+				},
+				{
+					"name": "Create Cinema",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PG\",\r\n    \"ticketPrice\": 50000,\r\n    \"city\": \"Bandung\",\r\n    \"seats\": [\r\n        \"A\",\r\n        \"B\",\r\n        \"C\"\r\n    ],\r\n    \"seatsAvailable\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cinemas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cinemas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"PG\",\r\n    \"ticketPrice\": 50000,\r\n    \"city\": \"Bandung\",\r\n    \"seats\": [\r\n        \"A\",\r\n        \"B\",\r\n        \"C\"\r\n    ],\r\n    \"seatsAvailable\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/cinemas",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"84-rhl6zIu4pvlMnafbjbX239D6AvU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Sep 2023 04:06:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"seats\": [\n        \"A\",\n        \"B\",\n        \"C\"\n    ],\n    \"_id\": \"650a6fe2d43e2546fcac5427\",\n    \"name\": \"PG\",\n    \"ticketPrice\": 50000,\n    \"city\": \"bandung\",\n    \"seatsAvailable\": 3,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Cinema Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/PG/Downloads/pexels-photo-1200450.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/cinemas/photo/:cinema_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cinemas",
+								"photo",
+								":cinema_id"
+							],
+							"variable": [
+								{
+									"key": "cinema_id",
+									"value": "650c5c35e1101d1ec05d8a4b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/PG/Downloads/pexels-photo-1200450.jpeg"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/cinemas/photo/:cinema_id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas",
+										"photo",
+										":cinema_id"
+									],
+									"variable": [
+										{
+											"key": "cinema_id",
+											"value": "650c5c35e1101d1ec05d8a4b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "522"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20a-Ft4agLUvjoXjgXesywWExNqxGcc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:14:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cinema\": {\n        \"seats\": [\n            \"A\",\n            \"B\",\n            \"C\"\n        ],\n        \"_id\": \"650c5c35e1101d1ec05d8a4b\",\n        \"name\": \"cinema updated\",\n        \"ticketPrice\": 50000,\n        \"city\": \"bandung\",\n        \"seatsAvailable\": 3,\n        \"__v\": 0,\n        \"image\": \"http://localhost:5000/uploads/cinemas/1695309293109-pexels-photo-1200450.jpeg\"\n    },\n    \"file\": {\n        \"fieldname\": \"file\",\n        \"originalname\": \"pexels-photo-1200450.jpeg\",\n        \"encoding\": \"7bit\",\n        \"mimetype\": \"image/jpeg\",\n        \"destination\": \"./uploads/cinemas\",\n        \"filename\": \"1695309293109-pexels-photo-1200450.jpeg\",\n        \"path\": \"uploads/cinemas/1695309293109-pexels-photo-1200450.jpeg\",\n        \"size\": 190248\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Cinema",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cinema updated\",\r\n    \"ticketPrice\": 50000,\r\n    \"city\": \"Bandung\",\r\n    \"seats\": [\r\n        \"A\",\r\n        \"B\",\r\n        \"C\"\r\n    ],\r\n    \"seatsAvailable\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cinemas/:cinema_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cinemas",
+								":cinema_id"
+							],
+							"variable": [
+								{
+									"key": "cinema_id",
+									"value": "650c5c35e1101d1ec05d8a4b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"cinema updated\",\r\n    \"ticketPrice\": 50000,\r\n    \"city\": \"Bandung\",\r\n    \"seats\": [\r\n        \"A\",\r\n        \"B\",\r\n        \"C\"\r\n    ],\r\n    \"seatsAvailable\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/cinemas/:cinema_id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas",
+										":cinema_id"
+									],
+									"variable": [
+										{
+											"key": "cinema_id",
+											"value": "650c5c35e1101d1ec05d8a4b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-bIL76Zlo8VEIfFf5lrAhm6xvpLc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:12:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"seats\": [\n        \"A\",\n        \"B\",\n        \"C\"\n    ],\n    \"_id\": \"650c5c35e1101d1ec05d8a4b\",\n    \"name\": \"cinema updated\",\n    \"ticketPrice\": 50000,\n    \"city\": \"bandung\",\n    \"seatsAvailable\": 3,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Cinema by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/cinemas/:cinema_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cinemas",
+								":cinema_id"
+							],
+							"variable": [
+								{
+									"key": "cinema_id",
+									"value": "650c5c2ee1101d1be65d8a48"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cinemas/:cinema_id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas",
+										":cinema_id"
+									],
+									"variable": [
+										{
+											"key": "cinema_id",
+											"value": "650c5c2ee1101d1be65d8a48"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"84-mKf06gvDMu1zB96Bbrl9poxPN8U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:11:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"seats\": [\n        \"A\",\n        \"B\",\n        \"C\"\n    ],\n    \"_id\": \"650c5c2ee1101d1be65d8a48\",\n    \"name\": \"PG\",\n    \"ticketPrice\": 50000,\n    \"city\": \"bandung\",\n    \"seatsAvailable\": 3,\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "404 - Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/cinemas/:cinema_id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"cinemas",
+										":cinema_id"
+									],
+									"variable": [
+										{
+											"key": "cinema_id",
+											"value": "650c5c2ee1101d1be65d8a48"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:11:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Not Found"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Invitation",
+			"item": [
+				{
+					"name": "Send Invitation Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"to\": \"mpg066@gmail.com\",\r\n        \"host\" : \"CINEMA PLUS\",\r\n        \"movie\" : \"Movie Name\",\r\n        \"date\" : \"2023-09-09\",\r\n        \"time\" : \"6.00PM GMT+7\",\r\n        \"cinema\" : \"CINEMA NAME\",\r\n        \"image\" : \"https://picsum.photos/200\",\r\n        \"seat\": \"A1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/invitations",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"invitations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"to\": \"xxxxxxx@gmail.com\",\r\n        \"host\" : \"CINEMA PLUS\",\r\n        \"movie\" : \"Movie Name\",\r\n        \"date\" : \"2023-09-09\",\r\n        \"time\" : \"6.00PM GMT+7\",\r\n        \"cinema\" : \"CINEMA NAME\",\r\n        \"image\" : \"https://picsum.photos/200\",\r\n        \"seat\": \"A1\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/invitations",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"invitations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47-ZX+svZA8ffQtqu3sYHPl27qP31w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:20:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"success\": true,\n        \"msg\": \"The Invitation to xxxxxxx@gmail.com was sent!\"\n    }\n]"
+						},
+						{
+							"name": "201 - Wrong Email Configuration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"to\": \"mpg066@gmail.com\",\r\n        \"host\" : \"CINEMA PLUS\",\r\n        \"movie\" : \"Movie Name\",\r\n        \"date\" : \"2023-09-09\",\r\n        \"time\" : \"6.00PM GMT+7\",\r\n        \"cinema\" : \"CINEMA NAME\",\r\n        \"image\" : \"https://picsum.photos/200\",\r\n        \"seat\": \"A1\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/invitations",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"invitations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"118-DkvLZ3f97UWW4Wdkx+hSXHu8zEA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Sep 2023 15:19:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"success\": false,\n        \"msg\": {\n            \"code\": \"EAUTH\",\n            \"response\": \"535-5.7.8 Username and Password not accepted. Learn more at\\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials b12-20020a170903228c00b001bdd7579b5dsm1609301plh.240 - gsmtp\",\n            \"responseCode\": 535,\n            \"command\": \"AUTH PLAIN\"\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Create Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Tehe III\",\r\n    \"image\": \"https://drive.google.com/uc?id=1Z_rsKKl94IhaZmnCO_1WcokD1IMVj8Gk\",\r\n    \"language\":\"japanese\",\r\n    \"genre\":\"action, fantasy, comedy\",\r\n    \"director\":\"michaelpege\",\r\n    \"cast\":\"michaelpege, phillipgunadi, rinne\",\r\n    \"description\": \"A love action comedy story about Ehit (Michael Pege) to pursue his love for a girl named Fu Tao (Rinne) part three\",\r\n    \"duration\":118,\r\n    \"releaseDate\":\"2025/09/22\",\r\n    \"endDate\": \"2025/10/14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/movies",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201-Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Tehe\",\r\n    \"image\": \"https://drive.google.com/uc?id=1Z_rsKKl94IhaZmnCO_1WcokD1IMVj8Gk\",\r\n    \"language\":\"japanese\",\r\n    \"genre\":\"action, fantasy, comedy\",\r\n    \"director\":\"michaelpege\",\r\n    \"cast\":\"michaelpege, phillipgunadi, rinne\",\r\n    \"description\": \"A love action comedy story about Ehit (Michael Pege) to pursue his love for a girl named Fu Tao (Rinne)\",\r\n    \"duration\":120,\r\n    \"releaseDate\":\"2023/09/22\",\r\n    \"endDate\": \"2023/10/14\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hosts}}/movies",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "469"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d5-hcZdke1dXJZSRpA9knQiPFT8wJ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 07:17:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"650d3fa4dd4dc724ef947f6c\",\n    \"title\": \"tehe\",\n    \"image\": \"https://drive.google.com/uc?id=1Z_rsKKl94IhaZmnCO_1WcokD1IMVj8Gk\",\n    \"language\": \"japanese\",\n    \"genre\": \"action, fantasy, comedy\",\n    \"director\": \"michaelpege\",\n    \"cast\": \"michaelpege, phillipgunadi, rinne\",\n    \"description\": \"a love action comedy story about ehit (michael pege) to pursue his love for a girl named fu tao (rinne)\",\n    \"duration\": 120,\n    \"releaseDate\": \"2023-09-22T00:00:00.000Z\",\n    \"endDate\": \"2023-10-14T00:00:00.000Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Movie Photo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{hosts}}/movies/photo/:id",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"movies",
+								"photo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "650d3fa4dd4dc724ef947f6c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/E:/Kuliah/S2/Asisten/APKS/HuTaoHmm.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{hosts}}/movies/photo/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										"photo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "650d3fa4dd4dc724ef947f6c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "714"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2ca-g0Djli0GISQ+OzbScza9DrNirwg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 07:41:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movie\": {\n        \"_id\": \"650d3fa4dd4dc724ef947f6c\",\n        \"title\": \"tehe\",\n        \"image\": \"http://localhost:5000/uploads/movies/1695368468272-HuTaoHmm.png\",\n        \"language\": \"japanese\",\n        \"genre\": \"action, fantasy, comedy\",\n        \"director\": \"michaelpege\",\n        \"cast\": \"michaelpege, phillipgunadi, rinne\",\n        \"description\": \"a love action comedy story about ehit (michael pege) to pursue his love for a girl named fu tao (rinne)\",\n        \"duration\": 120,\n        \"releaseDate\": \"2023-09-22T00:00:00.000Z\",\n        \"endDate\": \"2023-10-14T00:00:00.000Z\",\n        \"__v\": 0\n    },\n    \"file\": {\n        \"fieldname\": \"file\",\n        \"originalname\": \"HuTaoHmm.png\",\n        \"encoding\": \"7bit\",\n        \"mimetype\": \"image/png\",\n        \"destination\": \"./uploads/movies\",\n        \"filename\": \"1695368468272-HuTaoHmm.png\",\n        \"path\": \"uploads/movies/1695368468272-HuTaoHmm.png\",\n        \"size\": 29149\n    }\n}"
+						},
+						{
+							"name": "500 - No File Uploaded",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{hosts}}/movies/photo/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										"photo",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "650d3fa4dd4dc724ef947f6c"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "598"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 07:42:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error</title>\n    </head>\n    <body>\n        <pre>Error: Please upload a file\n            <br> &nbsp; &nbsp;at /usr/src/app/src/routes/movies.js:30:23\n            <br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/usr/src/app/node_modules/express/lib/router/layer.js:95:5)\n            <br> &nbsp; &nbsp;at next (/usr/src/app/node_modules/express/lib/router/route.js:144:13)\n            <br> &nbsp; &nbsp;at Immediate._onImmediate (/usr/src/app/node_modules/multer/lib/make-middleware.js:53:37)\n            <br> &nbsp; &nbsp;at process.processImmediate (node:internal/timers:478:21)\n        </pre>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "Get Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/movies",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/movies",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "470"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d6-iwPkwrgen2iUk1J6wauKeWcwOpk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 12:17:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"650d3fa4dd4dc724ef947f6c\",\n        \"title\": \"tehe\",\n        \"image\": \"http://localhost:5000/uploads/movies/1695368468272-HuTaoHmm.png\",\n        \"language\": \"japanese\",\n        \"genre\": \"action, fantasy, comedy\",\n        \"director\": \"michaelpege\",\n        \"cast\": \"michaelpege, phillipgunadi, rinne\",\n        \"description\": \"a love action comedy story about ehit (michael pege) to pursue his love for a girl named fu tao (rinne)\",\n        \"duration\": 120,\n        \"releaseDate\": \"2023-09-22T00:00:00.000Z\",\n        \"endDate\": \"2023-10-14T00:00:00.000Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Movies by Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200-Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/movies/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "650d3fa4dd4dc724ef947f6c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "468"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d4-5sUVkkheNiyOe4FvSuBSe3lZHOc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 12:20:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"650d3fa4dd4dc724ef947f6c\",\n    \"title\": \"tehe\",\n    \"image\": \"http://localhost:5000/uploads/movies/1695368468272-HuTaoHmm.png\",\n    \"language\": \"japanese\",\n    \"genre\": \"action, fantasy, comedy\",\n    \"director\": \"michaelpege\",\n    \"cast\": \"michaelpege, phillipgunadi, rinne\",\n    \"description\": \"a love action comedy story about ehit (michael pege) to pursue his love for a girl named fu tao (rinne)\",\n    \"duration\": 120,\n    \"releaseDate\": \"2023-09-22T00:00:00.000Z\",\n    \"endDate\": \"2023-10-14T00:00:00.000Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "404-NotFound",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/movies/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "650d3fa4dd4dc724ef947f6d"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 12:20:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Not Found"
+						}
+					]
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/movies/:id",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "650d872527d8bf2ec2b8631d"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/movies/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "650d872527d8bf2ec2b8631c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "484"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e4-rTwxUCP7frYe5Q94bPbcUZCowEU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 12:24:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"650d872527d8bf2ec2b8631c\",\n    \"title\": \"tehe iii\",\n    \"image\": \"https://drive.google.com/uc?id=1Z_rsKKl94IhaZmnCO_1WcokD1IMVj8Gk\",\n    \"language\": \"japanese\",\n    \"genre\": \"action, fantasy, comedy\",\n    \"director\": \"michaelpege\",\n    \"cast\": \"michaelpege, phillipgunadi, rinne\",\n    \"description\": \"a love action comedy story about ehit (michael pege) to pursue his love for a girl named fu tao (rinne) part three\",\n    \"duration\": 118,\n    \"releaseDate\": \"2025-09-22T00:00:00.000Z\",\n    \"endDate\": \"2025-10-14T00:00:00.000Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "404-Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/movies/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "650d872527d8bf2ec2b8631d"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 12:29:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Not Found"
+						}
+					]
+				},
+				{
+					"name": "Get Movie Recommendation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/movies/usermodeling/:username",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"movies",
+								"usermodeling",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "wisnuas"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-Success with No Recommendation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/movies/usermodeling/:username",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"movies",
+										"usermodeling",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "wisnuas"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Sep 2023 12:27:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "Make Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2023/09/24\",\r\n    \"startAt\": \"bandung\",\r\n    \"seats\": [\"B\"],\r\n    \"ticketPrice\": 50000,\r\n    \"total\": 1,\r\n    \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\r\n    \"cinemaId\": \"650c5c2ee1101d1be65d8a48\",\r\n    \"username\": \"wisnuas\",\r\n    \"phone\": \"08123456789\",\r\n    \"checkin\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/reservations",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201-Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date\": \"2023/09/24\",\r\n    \"startAt\": \"bandung\",\r\n    \"seats\": [\"B\"],\r\n    \"ticketPrice\": 50000,\r\n    \"total\": 1,\r\n    \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\r\n    \"cinemaId\": \"650c5c2ee1101d1be65d8a48\",\r\n    \"username\": \"wisnuas\",\r\n    \"phone\": \"08123456789\",\r\n    \"checkin\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hosts}}/reservations",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"reservations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2988"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bac-nIMmHQSs4kBXbaC7uIhHGiSdBtc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Sep 2023 02:58:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reservation\": {\n        \"seats\": [\n            \"B\"\n        ],\n        \"checkin\": false,\n        \"_id\": \"650e545627d92c283f511006\",\n        \"date\": \"2023-09-24T00:00:00.000Z\",\n        \"startAt\": \"bandung\",\n        \"ticketPrice\": 50000,\n        \"total\": 1,\n        \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\n        \"cinemaId\": \"650c5c2ee1101d1be65d8a48\",\n        \"username\": \"wisnuas\",\n        \"phone\": \"08123456789\",\n        \"__v\": 0\n    },\n    \"QRCode\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAAAklEQVR4AewaftIAAAeFSURBVO3BQY4kR5IAQdVA/v/Lun20uTgQyKom6Wsi9gdrXeJhrYs8rHWRh7Uu8rDWRR7WusjDWhd5WOsiD2td5GGtizysdZGHtS7ysNZFHta6yMNaF3lY6yIfvqTyN1V8Q2WqOFE5qThRmSomlTcqJpWpYlI5qThR+ZsqvvGw1kUe1rrIw1oX+fDDKn6Syt+kMlVMKicqJypTxaQyVZxUnFScqEwVJxU/SeUnPax1kYe1LvKw1kU+/DKVNyreUHmj4qRiUpkqTipOVCaVb6hMFZPKb1J5o+I3Pax1kYe1LvKw1kU+XKbib1I5qTipOFGZKqaKSWWq+P/kYa2LPKx1kYe1LvJh/Q+VNypOVE5UpooTlaniGypTxX/Zw1oXeVjrIg9rXeTDL6v4m1ROKr6hclJxUjGpvFFxUnGi8pMq/k0e1rrIw1oXeVjrIh9+mMo/qWJSOVGZKiaVqWJS+SepTBWTylQxqbyh8m/2sNZFHta6yMNaF/nwpYqbqEwVk8obFZPKGxXfqJhU3qj4L3lY6yIPa13kYa2LfPiSylQxqfykiqliUpkqTipOVE4qTlTeUDmpeENlqnhD5SdV/KaHtS7ysNZFHta6iP3BD1I5qZhUpooTlaliUnmj4kTlGxVvqEwVb6hMFZPKNyomlaniRGWq+EkPa13kYa2LPKx1EfuDL6hMFZPKScWJylQxqZxUvKFyUvGGylQxqZxUTCrfqDhReaPiDZWTim88rHWRh7Uu8rDWRT58qWJSeUNlqpgq3qg4UZkqpopJ5URlqnijYlJ5o+INlanijYoTlaliqphUftLDWhd5WOsiD2td5MOXVKaKN1ROVKaKqWJSmSr+JpWp4o2KN1T+SSpTxYnKb3pY6yIPa13kYa2LfPiXqzhRmSomlaliUvlGxaQyqZxUTCpTxUnFN1SmihOVqeKNit/0sNZFHta6yMNaF/nwpYo3VN5QOan4RsWkMlVMKm9UnKi8UfENlTdUTlROKiaVk4pvPKx1kYe1LvKw1kU+fEnlpOKkYlKZKiaVSWWqmCreqJhUpopJ5UTlpGJSmVSmin+zipOKSeUnPax1kYe1LvKw1kU+/DKVqeKkYlI5qZhUpopJZaqYVKaKNyp+UsUbKm9UTCpTxYnKicpU8Zse1rrIw1oXeVjrIh9+WMWk8obKVHGi8g2VN1SmihOVqWJSmSomlaliUjmpOFGZKt6omFSmikllqvhJD2td5GGtizysdZEPv6xiUpkqTlSmiqliUplUTiomlTdUpoqpYlKZKr5R8Y2KSWWq+E0qU8U3Hta6yMNaF3lY6yIfvlQxqUwVU8WkMlWcqEwVU8Wk8kbFGxXfUDmpOFGZKk5UpoqpYlKZKr5RMan8pIe1LvKw1kUe1rrIh1+mclJxojJVvFExqUwqJxVvqEwVJxUnKlPFVDGpnFScqLyhMlW8UfGTHta6yMNaF3lY6yIfflnFpHKiMlWcqPxNFScVk8o3KiaVqWKqeENlqnijYlKZKiaVqeInPax1kYe1LvKw1kXsD76g8l9W8YbKVHGiMlVMKlPFpDJVnKi8UTGp/KSKE5Wp4hsPa13kYa2LPKx1kQ9/WcWJylTxhspUMam8oTJVTCpTxVQxqbxRMal8o2JSmSomlTcqTlR+08NaF3lY6yIPa13E/uAHqUwVb6icVEwqJxUnKlPFT1L5N6k4UZkqJpWp4kTljYpvPKx1kYe1LvKw1kU+fEnlRGWqmFSmim9UTCpTxTdUTiqmijdUpopvqEwqJxWTyonKGxW/6WGtizysdZGHtS7y4YdVTCrfUPmbVE4qTlROKiaVqeJE5aTipOIbFScqJyonFd94WOsiD2td5GGti3z4y1SmikllqphUpopJZap4o+INlanijYpJ5Y2KN1TeqJhU3qiYVH7Tw1oXeVjrIg9rXcT+4AsqU8WJylQxqXyjYlL5SRUnKlPFN1R+UsWk8k+q+EkPa13kYa2LPKx1kQ9fqnij4qTiDZVvVJyonKicqJxUTCpTxaQyVUwqJyonFW+onFRMKr/pYa2LPKx1kYe1LvLhSyp/U8VUcVIxqZyoTBWTyhsVJypvVJxUTCpTxaRyojJVnFRMKlPFpDJVfONhrYs8rHWRh7Uu8uGHVfwklROVNyomlaliUjmpmFQmlaniDZWTipOKb1S8oTJVnFT8pIe1LvKw1kUe1rrIh1+m8kbFT6r4RsWJylRxojJVTCpTxaQyqUwVJyonKt+omFTeqPjGw1oXeVjrIg9rXeTDZSq+ofJGxaRyUjGpTBWTylQxqbxRcaJyUjGpTCpTxd/0sNZFHta6yMNaF/lwGZWp4jepvKEyVfwklaliUjmpeKPiGypTxTce1rrIw1oXeVjrIh9+WcVvqphUflLFpDJVvKEyqbyhMlV8o+IbKm9U/KaHtS7ysNZFHta6yIcfpvI3qZyonFRMKt9QmSpOKk5UpopJ5Rsqb1ScVJyo/KaHtS7ysNZFHta6iP3BWpd4WOsiD2td5GGtizysdZGHtS7ysNZFHta6yMNaF3lY6yIPa13kYa2LPKx1kYe1LvKw1kUe1rrI/wEuEe9uRj4xHAAAAABJRU5ErkJggg==\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Reservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/reservations",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/reservations",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"reservations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "551"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"227-T5TtWSXs6/JxgxOv3woZoc3e+1w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 10:52:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"seats\": [\n            \"B\"\n        ],\n        \"checkin\": false,\n        \"_id\": \"650e545627d92c283f511006\",\n        \"date\": \"2023-09-24T00:00:00.000Z\",\n        \"startAt\": \"bandung\",\n        \"ticketPrice\": 50000,\n        \"total\": 1,\n        \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\n        \"cinemaId\": \"650c5c2ee1101d1be65d8a48\",\n        \"username\": \"wisnuas\",\n        \"phone\": \"08123456789\",\n        \"__v\": 0\n    },\n    {\n        \"seats\": [\n            \"B\"\n        ],\n        \"checkin\": false,\n        \"_id\": \"653a448889c5001500513f75\",\n        \"date\": \"2023-09-24T00:00:00.000Z\",\n        \"startAt\": \"bandung\",\n        \"ticketPrice\": 50000,\n        \"total\": 1,\n        \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\n        \"cinemaId\": \"650c5c2ee1101d1be65d8a48\",\n        \"username\": \"wisnuas\",\n        \"phone\": \"08123456789\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Showtime",
+			"item": [
+				{
+					"name": "Create Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startAt\": \"bandung\",\r\n    \"startDate\": \"2023-09-24T00:00:00.000Z\",\r\n    \"endDate\": \"2023-09-24T00:02:00.000Z\",\r\n    \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\r\n    \"cinemaId\": \"650e53ee27d92c7c0c511001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hosts}}/showtimes",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"showtimes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201-Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startAt\": \"bandung\",\r\n    \"startDate\": \"2023-09-24T00:00:00.000Z\",\r\n    \"endDate\": \"2023-09-24T00:02:00.000Z\",\r\n    \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\r\n    \"cinemaId\": \"650e53ee27d92c7c0c511001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hosts}}/showtimes",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"showtimes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d5-prmY9XbTf0hB3W9ePggwFg7uzMs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 10:59:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"653a468989c500a73a513f7f\",\n    \"startAt\": \"bandung\",\n    \"startDate\": \"2023-09-24T00:00:00.000Z\",\n    \"endDate\": \"2023-09-24T00:02:00.000Z\",\n    \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\n    \"cinemaId\": \"650e53ee27d92c7c0c511001\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Show All Showtimes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/showtimes",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"showtimes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/showtimes",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"showtimes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d7-zPqC0RBbIef6HOy2kKWB6IyHkTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 11:00:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"653a468989c500a73a513f7f\",\n        \"startAt\": \"bandung\",\n        \"startDate\": \"2023-09-24T00:00:00.000Z\",\n        \"endDate\": \"2023-09-24T00:02:00.000Z\",\n        \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\n        \"cinemaId\": \"650e53ee27d92c7c0c511001\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Showtimes by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hosts}}/showtimes/:id",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"showtimes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/showtimes/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"showtimes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "653a468989c500a73a513f7f"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d5-prmY9XbTf0hB3W9ePggwFg7uzMs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 11:01:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"653a468989c500a73a513f7f\",\n    \"startAt\": \"bandung\",\n    \"startDate\": \"2023-09-24T00:00:00.000Z\",\n    \"endDate\": \"2023-09-24T00:02:00.000Z\",\n    \"movieId\": \"650d3fa4dd4dc724ef947f6c\",\n    \"cinemaId\": \"650e53ee27d92c7c0c511001\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "400-Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hosts}}/showtimes/:id",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"showtimes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-JTgyDrgFlPDVXHgJHSTh0VNlK3I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 11:02:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"stringValue\": \"\\\"653a468989c500a73a513f7q\\\"\",\n    \"valueType\": \"string\",\n    \"kind\": \"ObjectId\",\n    \"value\": \"653a468989c500a73a513f7q\",\n    \"path\": \"_id\",\n    \"reason\": {},\n    \"name\": \"CastError\",\n    \"message\": \"Cast to ObjectId failed for value \\\"653a468989c500a73a513f7q\\\" (type string) at path \\\"_id\\\" for model \\\"Showtime\\\"\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Health Check",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{hosts}}/health",
+					"host": [
+						"{{hosts}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/health",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13-iK+V7DavevO90tTTLml21bH5aXQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 13:32:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"API Server\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ImageURLValidator",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://drive.google.com/uc?id=1Z_rsKKl94IhaZmnCO_1WcokD1IMVj8Gk",
+					"protocol": "https",
+					"host": [
+						"drive",
+						"google",
+						"com"
+					],
+					"path": [
+						"uc"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1Z_rsKKl94IhaZmnCO_1WcokD1IMVj8Gk"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
