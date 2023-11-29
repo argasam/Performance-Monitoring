@@ -1,5 +1,10 @@
 version: "3.8"
 name: "cinema-plus-be"
+
+networks:
+  k6:
+  grafana:
+
 services:
   mongo-express:
     image: mongo-express
@@ -61,16 +66,25 @@ services:
     container_name: grafana
     ports:
       - "3000:3000"
+    networks:
+      - grafana
     volumes:
       - grafana-data:/var/lib/grafana
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
     restart: unless-stopped
 
   prometheus:
     image: prom/prometheus:v2.45.1
     container_name: prometheus
+    user: root
     ports:
       - 9090:9090
-    command: "--config.file=/etc/prometheus/prometheus.yaml"
+    command: 
+      - "--config.file=/etc/prometheus/prometheus.yaml"
+      - '--web.enable-remote-write-receiver'
     volumes:
       - ./config/prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
       - ./data:/prometheus
@@ -101,6 +115,26 @@ services:
     privileged: true
     restart: unless-stopped
 
+  influxdb:
+    image: influxdb:1.8
+    networks:
+      - k6
+      - grafana
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=k6
+
+  k6:
+    image: grafana/k6:latest
+    networks:
+      - k6
+    ports:
+      - "6565:6565"
+    environment:
+      - K6_OUT=influxdb=http://influxdb:8086/k6
+    volumes:
+      - ./samples:/scripts
 
 volumes:
   prometheus-data:

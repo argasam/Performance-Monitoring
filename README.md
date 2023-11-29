@@ -1,30 +1,21 @@
-# Performance Monitoring and Testing
+# tubes-apks-2023
 
-## Requirements
+#Requirements
 
-1. Docker
+#1. Docker
 
-2. NPM
+#2. NPM
 
-3. K6
+#Cara Penggunaan
 
-## How To Run Application
+#1. Jalankan npm install
 
-1. Jalankan npm install
+#2. Jalankan ./up.sh pada terminal Bash
 
-2. Jalankan ./up.sh pada terminal Bash
+## Running Test
 
-3. Set Up Environment Pribadi
+#1. >>>cd testing
 
-## How To Open Monitoring Tools
+#2. >>>k6 run --out influxdb=http:localhost:8086 [smoke_test/spike_test/load_test/stress_test].js (Pilih salah satu jenis test)
 
-1. Grafana pada localhost:3000 (username: admin, password: admin)
-
-2. Prometheus pada localhost:9090
-
-## How To Run Test
-
-1. Pindah directory ke testing 
->>> cd testing
-2. Pilih Script (smoke_test.js/spike_test.js/stress_test.js/load_test.js)
->>> k6 run [script_name].js
+#3. Buka Grafana pada localhost:3000 > dahsboard > k6 Load Testing > Set Timeline sesuai dengan Waktu Pengujian 
